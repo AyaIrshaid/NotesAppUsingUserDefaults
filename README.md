@@ -8,4 +8,4 @@
 * UserDefaults
 
 ## Screenshots
-![Add and view notes.](./ScreenRecordings/add.mov) ![Delete note.](./ScreenRecordings/delete.mov)
+![List of notes.](./ScreenRecordings/list.png) ![Add note.](./ScreenRecordings/add.png) ![Delete note.](./ScreenRecordings/delete.mov)
