@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		26880DCD2B05F28E007284E0 /* NotesAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26880DCC2B05F28E007284E0 /* NotesAppApp.swift */; };
-		26880DCF2B05F28E007284E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26880DCE2B05F28E007284E0 /* ContentView.swift */; };
 		26880DD12B05F28F007284E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26880DD02B05F28F007284E0 /* Assets.xcassets */; };
 		26880DD42B05F28F007284E0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26880DD32B05F28F007284E0 /* Preview Assets.xcassets */; };
 		26880DDC2B05F35B007284E0 /* NoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26880DDB2B05F35B007284E0 /* NoteListView.swift */; };
@@ -23,7 +22,6 @@
 /* Begin PBXFileReference section */
 		26880DC92B05F28E007284E0 /* NotesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26880DCC2B05F28E007284E0 /* NotesAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesAppApp.swift; sourceTree = "<group>"; };
-		26880DCE2B05F28E007284E0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		26880DD02B05F28F007284E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26880DD32B05F28F007284E0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		26880DDB2B05F35B007284E0 /* NoteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListView.swift; sourceTree = "<group>"; };
@@ -66,7 +64,6 @@
 			isa = PBXGroup;
 			children = (
 				26880DCC2B05F28E007284E0 /* NotesAppApp.swift */,
-				26880DCE2B05F28E007284E0 /* ContentView.swift */,
 				26880DE92B0650B8007284E0 /* Representables */,
 				26880DE42B0608A0007284E0 /* Formatters */,
 				26880DDA2B05F32E007284E0 /* NoteList */,
@@ -183,7 +180,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				26880DE82B062610007284E0 /* NoteViewModel.swift in Sources */,
-				26880DCF2B05F28E007284E0 /* ContentView.swift in Sources */,
 				26880DCD2B05F28E007284E0 /* NotesAppApp.swift in Sources */,
 				26880DDC2B05F35B007284E0 /* NoteListView.swift in Sources */,
 				26880DE02B05F662007284E0 /* AddNewNoteView.swift in Sources */,
