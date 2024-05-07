@@ -9,7 +9,7 @@ import SwiftUI
 
 struct NoteListView: View {
     var notesArray: [Note] = []
-    @ObservedObject var noteViewModel = NoteViewModel()
+    @ObservedObject var noteViewModel: NoteViewModel
     @State private var showShareSheet = false
     @State private var sharedNote: Note?
     
@@ -71,5 +71,5 @@ struct NoteListView: View {
 }
 
 #Preview {
-    NoteListView()
+    NoteListView(noteViewModel: .init(SavedNotesArrayKey))
 }

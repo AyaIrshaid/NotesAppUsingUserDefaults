@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		263DBE812BEA4F760082831D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263DBE802BEA4F760082831D /* Constants.swift */; };
 		26880DCD2B05F28E007284E0 /* NotesAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26880DCC2B05F28E007284E0 /* NotesAppApp.swift */; };
 		26880DD12B05F28F007284E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26880DD02B05F28F007284E0 /* Assets.xcassets */; };
 		26880DD42B05F28F007284E0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26880DD32B05F28F007284E0 /* Preview Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		263DBE802BEA4F760082831D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		26880DC92B05F28E007284E0 /* NotesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26880DCC2B05F28E007284E0 /* NotesAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesAppApp.swift; sourceTree = "<group>"; };
 		26880DD02B05F28F007284E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -44,6 +46,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		263DBE7F2BEA4F4A0082831D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				263DBE802BEA4F760082831D /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		26880DC02B05F28E007284E0 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				26880DCC2B05F28E007284E0 /* NotesAppApp.swift */,
+				263DBE7F2BEA4F4A0082831D /* Utils */,
 				26880DE92B0650B8007284E0 /* Representables */,
 				26880DE42B0608A0007284E0 /* Formatters */,
 				26880DDA2B05F32E007284E0 /* NoteList */,
@@ -187,6 +198,7 @@
 				26880DE62B0608BB007284E0 /* NewDateFormatter.swift in Sources */,
 				26880DEB2B0650E3007284E0 /* ShareSheet.swift in Sources */,
 				26880DE22B0601B7007284E0 /* NoteDetailsView.swift in Sources */,
+				263DBE812BEA4F760082831D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,13 +9,16 @@ import UIKit
 
 class NoteViewModel: ObservableObject {
     @Published private(set) var notes: [Note] = []
-    
-    init() {
+
+    let savedNotesArrayKey: String
+
+    init(_ savedNotesArrayKey: String) {
+        self.savedNotesArrayKey = savedNotesArrayKey
         getNotes()
     }
 
     func getNotes() {
-        if let data = UserDefaults.standard.data(forKey: "SavedNotesArray") {
+        if let data = UserDefaults.standard.data(forKey: savedNotesArrayKey) {
             if let decoded = try? JSONDecoder().decode([Note].self, from: data) {
                 notes = decoded
             }
@@ -36,7 +39,7 @@ class NoteViewModel: ObservableObject {
 
     private func saveNewNotesArray() {
         if let encoded = try? JSONEncoder().encode(notes) {
-            UserDefaults.standard.set(encoded, forKey: "SavedNotesArray")
+            UserDefaults.standard.set(encoded, forKey: savedNotesArrayKey)
         }
     }
 }
