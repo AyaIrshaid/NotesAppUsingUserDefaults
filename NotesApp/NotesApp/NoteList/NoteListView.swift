@@ -59,7 +59,7 @@ struct NoteListView: View {
             })
             .navigationTitle("Notes")
             .toolbar {
-                NavigationLink(destination: AddNewNoteView()) {
+                NavigationLink(destination: AddNewNoteView(viewModel: .init(savedNotesArrayKey: SavedNotesArrayKey))) {
                     Label("", systemImage: "plus")
                 }
             }

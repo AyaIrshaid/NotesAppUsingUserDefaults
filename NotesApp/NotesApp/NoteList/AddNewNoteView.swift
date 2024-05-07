@@ -13,6 +13,8 @@ struct AddNewNoteView: View {
     @State private var noteTitle: String = "Enter title"
     @State private var noteMessageText: String = "Enter note message"
 
+    var viewModel: AddNewNoteViewModel
+
     var body: some View {
         VStack(alignment: .leading) {
             TextEditor(text: $noteTitle)
@@ -29,33 +31,14 @@ struct AddNewNoteView: View {
         }
         .toolbar {
             Button("Done") {
-                saveNewNote(title: noteTitle, messageText: noteMessageText) {
+                viewModel.saveNewNote(title: noteTitle, messageText: noteMessageText) {
                     dismiss()
                 }
             }
         }
     }
-
-    private func saveNewNote(title: String, messageText: String, _ clouser: () -> Void) {
-        let defaults = UserDefaults.standard
-        let newNote = Note(title: title.isEmpty ? "New Note" : title,
-                           message: messageText)
-        var newNoteArray = [newNote]
-
-        if let data = defaults.data(forKey: "SavedNotesArray") {
-            if let decoded = try? JSONDecoder().decode([Note].self, from: data) {
-                newNoteArray.append(contentsOf: decoded)
-            }
-        }
-
-        if let encoded = try? JSONEncoder().encode(newNoteArray) {
-            defaults.set(encoded, forKey: "SavedNotesArray")
-        }
-
-        clouser()
-    }
 }
 
 #Preview {
-    AddNewNoteView()
+    AddNewNoteView(viewModel: .init(savedNotesArrayKey: SavedNotesArrayKey))
 }

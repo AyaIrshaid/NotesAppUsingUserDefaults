@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		263DBE812BEA4F760082831D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263DBE802BEA4F760082831D /* Constants.swift */; };
+		263DBE832BEA508F0082831D /* AddNewNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263DBE822BEA508F0082831D /* AddNewNoteViewModel.swift */; };
 		26880DCD2B05F28E007284E0 /* NotesAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26880DCC2B05F28E007284E0 /* NotesAppApp.swift */; };
 		26880DD12B05F28F007284E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26880DD02B05F28F007284E0 /* Assets.xcassets */; };
 		26880DD42B05F28F007284E0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26880DD32B05F28F007284E0 /* Preview Assets.xcassets */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		263DBE802BEA4F760082831D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		263DBE822BEA508F0082831D /* AddNewNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewNoteViewModel.swift; sourceTree = "<group>"; };
 		26880DC92B05F28E007284E0 /* NotesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26880DCC2B05F28E007284E0 /* NotesAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesAppApp.swift; sourceTree = "<group>"; };
 		26880DD02B05F28F007284E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				26880DE72B062610007284E0 /* NoteViewModel.swift */,
 				26880DDB2B05F35B007284E0 /* NoteListView.swift */,
 				26880DDF2B05F662007284E0 /* AddNewNoteView.swift */,
+				263DBE822BEA508F0082831D /* AddNewNoteViewModel.swift */,
 				26880DE12B0601B7007284E0 /* NoteDetailsView.swift */,
 			);
 			path = NoteList;
@@ -193,6 +196,7 @@
 				26880DE82B062610007284E0 /* NoteViewModel.swift in Sources */,
 				26880DCD2B05F28E007284E0 /* NotesAppApp.swift in Sources */,
 				26880DDC2B05F35B007284E0 /* NoteListView.swift in Sources */,
+				263DBE832BEA508F0082831D /* AddNewNoteViewModel.swift in Sources */,
 				26880DE02B05F662007284E0 /* AddNewNoteView.swift in Sources */,
 				26880DDE2B05F41E007284E0 /* Note.swift in Sources */,
 				26880DE62B0608BB007284E0 /* NewDateFormatter.swift in Sources */,
