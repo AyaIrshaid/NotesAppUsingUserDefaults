@@ -15,6 +15,12 @@ struct Note: Codable {
     var creationDate: Date = .now
 }
 
+extension Note: Equatable {
+    static func == (lhs: Note, rhs: Note) -> Bool {
+        return lhs.id == rhs.id
+    }
+}
+
 extension Note {
     func returnFormattedDate() -> String {
         var formattedDate = ""
