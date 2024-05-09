@@ -10,20 +10,24 @@ import SwiftUI
 struct AddNewNoteView: View {
     @Environment(\.dismiss) private var dismiss
 
-    @State private var noteTitle: String = "Enter title"
+    @State private var noteTitle: String = ""
     @State private var noteMessageText: String = "Enter note message"
 
     var viewModel: AddNewNoteViewModel
 
     var body: some View {
         VStack(alignment: .leading) {
-            TextEditor(text: $noteTitle)
+            TextField("", text: $noteTitle, prompt: Text("Enter title")
+                .foregroundColor(.gray))
                 .foregroundStyle(.secondary)
                 .padding(.horizontal)
                 .frame(height: 50)
             TextEditor(text: $noteMessageText)
                 .foregroundStyle(.secondary)
                 .padding(.horizontal)
+                .onTapGesture {
+                    noteMessageText = noteMessageText == "Enter note message" ? "" : noteMessageText
+                }
             Spacer()
         }
         .background {
