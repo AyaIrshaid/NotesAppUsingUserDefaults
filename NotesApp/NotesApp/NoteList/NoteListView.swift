@@ -16,7 +16,7 @@ struct NoteListView: View {
     let palette = Image(systemName: "list.bullet.circle")
         .symbolRenderingMode(.multicolor)
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List {
                 ForEach(noteViewModel.notes, id: \.id) { note in
                     NavigationLink(destination: NoteDetailsView(note: note)) {
@@ -58,11 +58,9 @@ struct NoteListView: View {
                 ShareSheet(activityItems: [sharedNote?.message as Any])
             })
             .navigationTitle("Notes")
-            .toolbar {
-                NavigationLink(destination: AddNewNoteView(viewModel: .init(savedNotesArrayKey: SavedNotesArrayKey))) {
-                    Label("", systemImage: "plus")
-                }
-            }
+            .navigationBarItems(trailing: NavigationLink(destination: AddNewNoteView(viewModel: .init(savedNotesArrayKey: SavedNotesArrayKey))) {
+                Label("", systemImage: "plus")
+            })
             .onAppear {
                 noteViewModel.getNotes()
             }
