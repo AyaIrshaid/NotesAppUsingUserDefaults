@@ -5,15 +5,16 @@
 //  Created by Aya Irshaid on 07/05/2024.
 //
 
-import XCTest
+import Foundation
+import Testing
 
 @testable import NotesApp
 
-final class AddNewNoteViewModelTests: XCTestCase {
+@Suite actor AddNewNoteViewModelTests {
 
     private var sut: AddNewNoteViewModel?
 
-    override class func setUp() {
+    func setUp() {
         UserDefaults.standard.set(nil, forKey: "TestSavedNotesArrayKey")
     }
 
@@ -29,11 +30,11 @@ final class AddNewNoteViewModelTests: XCTestCase {
 
         // then
         let data = UserDefaults.standard.data(forKey: savedNotesArrayKey)
-        XCTAssertNotNil(data, "data should not be nil")
+        #expect(data != nil) // "data should not be nil"
         let notes = try? JSONDecoder().decode([Note].self, from: data!)
-        XCTAssertNotNil(notes, "notes should not be nil")
+        #expect(notes != nil) // "notes should not be nil"
         let note = notes?.first
-        XCTAssertEqual(note?.title, noteTitle, "Note title should be \(noteTitle)")
-        XCTAssertEqual(note?.message, noteMessage, "Note message should be \(noteMessage)")
+        #expect(note?.title == noteTitle)
+        #expect(note?.message == noteMessage)
     }
 }
