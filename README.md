@@ -6,6 +6,7 @@
 ## Using
 * SwiftUI
 * UserDefaults
+* SwiftTesting
 
 ## Screenshots
 ![List of notes.](./ScreenRecordings/list.png) ![Add note.](./ScreenRecordings/add.png) ![Delete note.](./ScreenRecordings/delete.mov)
