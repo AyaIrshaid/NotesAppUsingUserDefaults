@@ -5,17 +5,18 @@
 //  Created by Aya Irshaid on 07/05/2024.
 //
 
-import XCTest
+import Foundation
+import Testing
 
 @testable import NotesApp
 
-final class NoteViewModelTests: XCTestCase {
+@Suite actor NoteViewModelTests {
 
-    override class func setUp() {
+    func setUp() {
         UserDefaults.standard.set(nil, forKey: "TestSavedNotesArrayKey")
     }
 
-    override class func tearDown() {
+    func tearDown() {
         UserDefaults.standard.set(nil, forKey: "TestSavedNotesArrayKey")
     }
 
@@ -28,10 +29,10 @@ final class NoteViewModelTests: XCTestCase {
         sut.getNotes()
 
         // then
-        XCTAssertNotEqual(sut.notes, [], "notes should not be empty")
+        #expect(sut.notes != [], "notes should not be empty")
         let note = sut.notes.first
-        XCTAssertEqual(note?.title, "TestTitle", "note title should be: TestTitle")
-        XCTAssertEqual(note?.message, "MessageText-Test", "note message should be: MessageText-Test")
+        #expect(note?.title == "TestTitle", "note title should be: TestTitle")
+        #expect(note?.message == "MessageText-Test", "note message should be: MessageText-Test")
     }
 
     func testDeleteNote() {
@@ -40,13 +41,13 @@ final class NoteViewModelTests: XCTestCase {
         addNote()
         sut.getNotes()
         let note = sut.notes.first
-        XCTAssertEqual(note?.title, "TestTitle", "note title should be: TestTitle")
+        #expect(note?.title == "TestTitle", "note title should be: TestTitle")
 
         // when
         sut.deleteNote(note!)
 
         // then
-        XCTAssertEqual(sut.notes, [], "notes should be empty")
+        #expect(sut.notes == [], "notes should be empty")
     }
 }
 
